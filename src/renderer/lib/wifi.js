@@ -18,7 +18,7 @@ class Wifi {
 
     setWifi (name , password) {
         if(!name|| !password) return ;
-        let $bash = `netsh wlan set hostednetwork mode=allow ssid=${name}key=${password}`;
+        let $bash = `netsh wlan set hostednetwork mode=allow ssid=${name} key=${password}`;
         return exec($bash);
     }
 
